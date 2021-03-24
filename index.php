@@ -43,7 +43,6 @@
     require_once 'view/capitulos.php';
   }
   ?>
-  <i class="fa fa-hourglass" aria-hidden="true"></i>
   <!--JavaScript-->
   <?php require_once 'app/dependencias_js.php';?>
 </body>
