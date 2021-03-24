@@ -1,0 +1,101 @@
+.caja {
+    height: 180px;
+    width: 470px;
+    background-color: $color1;
+    border: solid 5px #051dee;
+}
+
+.fantasma-blinky {
+    @include fantasma(#ff1111);
+}
+
+.fantasma-pinky {
+    @include fantasma(#f312af);
+}
+
+.fantasma-inky {
+    @include fantasma(#00ffff);
+}
+
+.fantasma-clyde {
+    @include fantasma(#ff8800);
+}
+
+.ojos {
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: #0000ff;
+        height: 10px;
+        width: 10px;
+        border-radius: 100%;
+        top: 25px;
+        left: 5px;
+        z-index: 99;
+    }
+    &::after {
+        left: 30px;
+    }
+}
+
+.pies {
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: solid 10px $color1;
+    border-top-color: transparent;
+    bottom: -10px;
+    &::before,
+    &::after {
+        position: absolute;
+        height: 0;
+        width: 0;
+        border: solid 10px $color1;
+        border-top-color: transparent;
+        bottom: -10px;
+    }
+    &::before {
+        content: "";
+        left: 10px;
+    }
+    &::after {
+        content: "";
+        left: 30px;
+    }
+}
+
+a {
+    &:hover {
+        h2 {
+            color: #e5ff00;
+        }
+        text-decoration: none;
+        .fantasma-blinky,
+        .fantasma-pinky,
+        .fantasma-inky,
+        .fantasma-clyde {
+            background-color: #0000ff;
+            left: 70%;
+            animation: mover 2.8s linear infinite;
+            .ojos {
+                &::before,
+                &::after {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+@keyframes mover {
+    0% {
+        left: 20%;
+    }
+    50% {
+        left: 80%;
+    }
+    100% {
+        left: 20%;
+    }
+}
