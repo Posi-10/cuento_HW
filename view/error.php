@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      Error XD
+      <kbd>Alt</kbd> + <kbd>F</kbd>
     </div>
   </div>
 </div>
