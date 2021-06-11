@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="utf-8">
   <!--CSS-->
-  <?php require_once 'app/dependencias_css.php';?>
+  <?php require_once 'app/dependencias.php';?>
 </head>
 
 <body>
@@ -44,7 +44,6 @@
   }
   ?>
   <!--JavaScript-->
-  <?php require_once 'app/dependencias_js.php';?>
 </body>
 
 </html>
